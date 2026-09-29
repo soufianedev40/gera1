@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Deutsch A1 · تعلم الألمانية</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,500;9..144,700&family=Inter:wght@400;500;600&family=Noto+Sans+Arabic:wght@400;600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<div class="wrap">
+  <header>
+    <div class="eng">Deutsch A1</div>
+    <div class="badge">مرحبا بكم — Willkommen!</div>
+    <p>يأخذك هذا الموقع في رحلة تعلّم اللغة الألمانية خطوة بخطوة انطلاقًا من الصفر: الأفعال بأربعة أزمنة، قاعدة der/die/das بالتفصيل، عشرات الكلمات المصنّفة حسب المواضيع، الأبجدية، الأرقام، أدوات الاستفهام والربط، وكيفية التعريف بنفسك وبعائلتك — مع تمارين تفاعلية تختبر بها مستواك خطوة بخطوة. اضغط على 🔊 في أي مكان لسماع النطق الصحيح، وابدأ رحلتك نحو إتقان الألمانية من المستوى A1.</p>
+    <div class="legend">
+      <span><span class="dot" style="background:var(--blue)"></span> der (مذكر)</span>
+      <span><span class="dot" style="background:var(--red)"></span> die (مؤنث)</span>
+      <span><span class="dot" style="background:var(--green)"></span> das (محايد)</span>
+    </div>
+  </header>
+
+  <nav>
+    <button class="tab active" data-p="verben">الأفعال</button>
+    <button class="tab" data-p="regeln">قواعد der/die/das</button>
+    <button class="tab" data-p="nomen">الكلمات</button>
+    <button class="tab" data-p="alphabet">الأبجدية</button>
+    <button class="tab" data-p="zahlen">الأرقام</button>
+    <button class="tab" data-p="themen">تعارف وعائلة</button>
+    <button class="tab" data-p="uebungen">تمارين</button>
+  </nav>
+
+  <section class="panel active" id="verben"><div class="grid" id="verbGrid"></div></section>
+
+  <section class="panel" id="regeln">
+    <div class="rulecard der">
+      <h3>der — مذكر</h3>
+      <div class="rule-row"><div class="txt">الرجال والمهن المذكرة</div><div class="chips" data-ex="der Mann,der Lehrer,der Vater"></div></div>
+      <div class="rule-row"><div class="txt">أيام الأسبوع، الشهور، الفصول</div><div class="chips" data-ex="der Montag,der Januar,der Sommer"></div></div>
+      <div class="rule-row"><div class="txt">الكلمات التي تنتهي بـ -er, -en, -ig, -ismus</div><div class="chips" data-ex="der Computer,der Garten,der König"></div></div>
+      <div class="note">مثال: <span style="direction:ltr;display:inline-block">Der Vater arbeitet.</span> — الأب يعمل</div>
+    </div>
+    <div class="rulecard die">
+      <h3>die — مؤنث</h3>
+      <div class="rule-row"><div class="txt">النساء والمهن المؤنثة</div><div class="chips" data-ex="die Frau,die Mutter,die Lehrerin"></div></div>
+      <div class="rule-row"><div class="txt">الكلمات التي تنتهي بـ -e, -heit, -keit, -ung, -schaft</div><div class="chips" data-ex="die Lampe,die Freiheit,die Zeitung"></div></div>
+      <div class="rule-row"><div class="txt">معظم الأرقام عند استعمالها كأسماء</div><div class="chips" data-ex="die Eins,die Zwei"></div></div>
+      <div class="note">مثال: <span style="direction:ltr;display:inline-block">Die Mutter kocht.</span> — الأم تطبخ</div>
+    </div>
+    <div class="rulecard das">
+      <h3>das — محايد</h3>
+      <div class="rule-row"><div class="txt">صيغة التصغير التي تنتهي بـ -chen, -lein</div><div class="chips" data-ex="das Mädchen,das Kindlein"></div></div>
+      <div class="rule-row"><div class="txt">الأفعال المستعملة كأسماء (المصدر)</div><div class="chips" data-ex="das Essen,das Lernen"></div></div>
+      <div class="rule-row"><div class="txt">الكلمات التي تبدأ بـ Ge-، وكذلك الألوان واللغات</div><div class="chips" data-ex="das Gebäude,das Rot,das Deutsch"></div></div>
+      <div class="note">مثال: <span style="direction:ltr;display:inline-block">Das Kind spielt.</span> — الطفل يلعب</div>
+    </div>
+    <p style="color:var(--muted);font-size:13px">ملاحظة: توجد استثناءات في اللغة الألمانية، وهذه القواعد تصلح في معظم الحالات، لذا يجب حفظ كل كلمة مع أداة التعريف الخاصة بها.</p>
+    <div class="topic" style="margin-top:30px"><h2>أدوات الاستفهام</h2><p class="sub">الكلمات الأساسية لطرح الأسئلة.</p><div class="phrase-list" id="qwList"></div></div>
+    <div class="topic"><h2>حروف الجر المكانية</h2><p class="sub">لوصف مكان الأشياء والأشخاص.</p><div class="phrase-list" id="prepList"></div></div>
+    <div class="topic"><h2>أدوات الربط الأساسية</h2><p class="sub">لربط الجمل والأفكار ببعضها.</p>
+      <div class="rulecard">
+        <div class="rule-row"><div class="txt">للربط بين فكرتين متشابهتين — معناها "و"</div><div class="chips" data-ex="und"></div></div>
+        <div class="rule-row"><div class="txt">للتعبير عن التضاد — معناها "لكن"</div><div class="chips" data-ex="aber"></div></div>
+        <div class="rule-row"><div class="txt">لإعطاء اختيار بين أمرين — معناها "أو"</div><div class="chips" data-ex="oder"></div></div>
+        <div class="rule-row"><div class="txt">لذكر السبب، وترتيب الجملة بعدها يبقى عاديًا — معناها "لأنّ"</div><div class="chips" data-ex="denn"></div></div>
+        <div class="rule-row"><div class="txt">لذكر السبب أيضًا، لكن الفعل ينتقل إلى آخر الجملة — معناها "لأنّ"</div><div class="chips" data-ex="weil"></div></div>
+        <div class="rule-row"><div class="txt">للاستدراك بعد نفي — معناها "بل"</div><div class="chips" data-ex="sondern"></div></div>
+        <div class="rule-row"><div class="txt">للتعبير عن النتيجة — معناها "لذلك"</div><div class="chips" data-ex="deshalb"></div></div>
+      </div>
+    </div>
+  </section>
+
+  <section class="panel" id="nomen"><div id="nomenGrid"></div></section>
+  <section class="panel" id="alphabet"><div class="grid small" id="alphaGrid"></div></section>
+  <section class="panel" id="zahlen"><div class="grid small" id="zahlGrid"></div></section>
+
+  <section class="panel" id="themen">
+    <div class="topic"><h2>تحيات ومجاملات</h2><p class="sub">أول الكلمات التي يحتاجها كل مبتدئ.</p><div class="phrase-list" id="greetList"></div></div>
+    <div class="topic"><h2>عرّف بنفسك</h2><p class="sub">جمل للتعريف بالنفس باللغة الألمانية.</p><div class="phrase-list" id="selfList"></div></div>
+    <div class="topic"><h2>العائلة</h2><p class="sub">كلمات للحديث عن العائلة.</p><div class="phrase-list" id="famList"></div></div>
+    <div class="topic"><h2>جمل عن العائلة</h2><p class="sub">أمثلة جاهزة للحديث عن عائلتك.</p><div class="phrase-list" id="famSentList"></div></div>
+    <div class="topic"><h2>مثال: تقديم كامل</h2>
+      <div class="dialogue">
+        <div class="pair"><p class="de">Hallo! Ich heiße Sara. Mein Familienname ist El Amrani.</p>
+        <p class="ar">مرحبًا! اسمي سارة. لقبي العمراني.</p></div>
+        <div class="pair"><p class="de">Ich komme aus Marokko und wohne in Rabat, genau in der Maarif-Straße Nr. 3.</p>
+        <p class="ar">أنا من المغرب وأسكن في الرباط، بالضبط في شارع المعاريف رقم 3.</p></div>
+        <div class="pair"><p class="de">Ich bin Marokkanerin. Meine Muttersprache ist Arabisch, und ich spreche auch ein bisschen Deutsch.</p>
+        <p class="ar">أنا مغربية. لغتي الأم هي العربية، وأتحدث أيضًا قليلًا من الألمانية.</p></div>
+        <div class="pair"><p class="de">Ich bin zwanzig Jahre alt und ich lerne Deutsch.</p>
+        <p class="ar">عمري عشرون عامًا وأتعلم اللغة الألمانية.</p></div>
+        <div class="pair"><p class="de">Meine Familie ist sehr groß. Ich habe drei Brüder und zwei Schwestern.</p>
+        <p class="ar">عائلتي كبيرة جدًا. لدي ثلاثة إخوة وأختان.</p></div>
+        <div class="pair"><p class="de">Meine Eltern leben in Casablanca.</p>
+        <p class="ar">يعيش والداي في الدار البيضاء.</p></div>
+        <div class="pair"><p class="de">Mein Vater heißt Ahmed und meine Mutter heißt Fatima.</p>
+        <p class="ar">اسم أبي أحمد واسم أمي فاطمة.</p></div>
+        <div class="pair"><p class="de">Ich bin Studentin und meine Hobbys sind Lesen und Musik.</p>
+        <p class="ar">أنا طالبة وهواياتي القراءة والموسيقى.</p></div>
+        <div class="pair"><p class="de">Heute ist das Wetter schön und warm.</p>
+        <p class="ar">اليوم الطقس جميل ودافئ.</p></div>
+        <div class="pair"><p class="de">Auf Wiedersehen und bis bald!</p>
+        <p class="ar">مع السلامة وإلى اللقاء قريبًا!</p></div>
+      </div>
+    </div>
+  </section>
+
+  <section class="panel" id="uebungen">
+    <div class="topic"><h2>تمارين: التعريف بالنفس</h2><p class="sub">اختر الإجابة الصحيحة.</p><div id="quizSelf"></div></div>
+    <div class="topic"><h2>تمارين: تصريف الأفعال</h2><p class="sub">اختر الصيغة الصحيحة للفعل.</p><div id="quizVerbs"></div></div>
+    <div class="topic"><h2>تمارين: der / die / das</h2><p class="sub">اختر أداة التعريف الصحيحة.</p><div id="quizArt"></div></div>
+  </section>
+
+  <footer>Deutsch A1 · موقع للتعلم الذاتي</footer>
+</div>
+
+<script src="script.js"></script>
+</body>
+</html>
